@@ -58,3 +58,20 @@ test("valid numeric eligibility answers persist in the profile", () => {
   assert.equal(p.profile.gapYears, "0");
   assert.equal(p.profile.girlsSupported, "2");
 });
+
+test("valid income ranges persist and invalid ranges stay unknown", () => {
+  const valid = readPlan(
+    JSON.stringify({
+      profile: { income: -1, incomeRange: "250001-450000" },
+    }),
+  );
+  assert.equal(valid.profile.income, -1);
+  assert.equal(valid.profile.incomeRange, "250001-450000");
+
+  const invalid = readPlan(
+    JSON.stringify({
+      profile: { income: -1, incomeRange: "invented-range" },
+    }),
+  );
+  assert.equal(invalid.profile.incomeRange, "");
+});

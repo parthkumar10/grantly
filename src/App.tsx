@@ -36,6 +36,7 @@ import {
   opportunities,
   money,
   initialProfile,
+  incomeRanges,
   eligibilityChecks,
   matchScore,
   documentReadiness,
@@ -69,8 +70,14 @@ export default function Home() {
   const [compare, setCompare] = useState<number[]>([]);
   const [profile, setProfile] = useState(initialProfile);
   const [draftProfile, setDraftProfile] = useState(initialProfile);
+  const [incomeEntryMode, setIncomeEntryMode] = useState<"exact" | "range">(
+    "exact",
+  );
   useEffect(() => {
-    if (tab === "Profile") setDraftProfile({ ...profile });
+    if (tab === "Profile") {
+      setDraftProfile({ ...profile });
+      setIncomeEntryMode(profile.incomeRange ? "range" : "exact");
+    }
   }, [tab, profile]);
   const [cloudRevision, setCloudRevision] = useState(0);
   const [apps, setApps] = useState<Record<number, string>>({});
@@ -1255,54 +1262,83 @@ export default function Home() {
                   </select>
                 </label>
                 <div className="income-field">
-                  <label htmlFor="annual-household-income">
-                    Annual household income (₹)
+                  <label htmlFor="income-entry-mode">
+                    How would you like to share your annual household income?
                   </label>
-                  <input
-                    id="annual-household-income"
-                    type="number"
-                    inputMode="numeric"
-                    min="0"
-                    max="100000000"
-                    step="1"
-                    required
-                    placeholder="Enter exact amount, e.g. 350000"
-                    value={draftProfile.income < 0 ? "" : draftProfile.income}
-                    onChange={(e) =>
+                  <select
+                    id="income-entry-mode"
+                    value={incomeEntryMode}
+                    onChange={(e) => {
+                      const mode = e.target.value as "exact" | "range";
+                      setIncomeEntryMode(mode);
                       setDraftProfile({
                         ...draftProfile,
-                        income:
-                          e.target.value === "" ? -1 : Number(e.target.value),
-                      })
-                    }
-                  />
-                  <span className="field-help">
-                    Quick fill (or type any exact amount):
-                  </span>
-                  <div className="income-shortcuts">
-                    {(
-                      [
-                        ["₹2.5 lakh", 250000],
-                        ["₹4.5 lakh", 450000],
-                        ["₹8 lakh", 800000],
-                      ] as const
-                    ).map(([label, amount]) => (
-                      <button
-                        key={label}
-                        type="button"
-                        className="income-shortcut"
-                        aria-pressed={draftProfile.income === amount}
-                        onClick={() =>
+                        income: mode === "exact" ? draftProfile.income : -1,
+                        incomeRange: "",
+                      });
+                    }}
+                  >
+                    <option value="exact">Enter an exact amount</option>
+                    <option value="range">Choose an approximate range</option>
+                  </select>
+                  {incomeEntryMode === "range" ? (
+                    <>
+                      <label htmlFor="annual-household-income-range">
+                        Approximate annual household income
+                      </label>
+                      <select
+                        id="annual-household-income-range"
+                        required
+                        value={draftProfile.incomeRange}
+                        onChange={(e) =>
                           setDraftProfile({
                             ...draftProfile,
-                            income: Number(amount),
+                            incomeRange: e.target.value,
                           })
                         }
                       >
-                        {label}
-                      </button>
-                    ))}
-                  </div>
+                        <option value="">Select an income range</option>
+                        {incomeRanges.map((range) => (
+                          <option key={range.value} value={range.value}>
+                            {range.label}
+                          </option>
+                        ))}
+                      </select>
+                    </>
+                  ) : (
+                    <>
+                      <label htmlFor="annual-household-income">
+                        Exact annual household income (₹)
+                      </label>
+                      <input
+                        id="annual-household-income"
+                        type="number"
+                        inputMode="numeric"
+                        min="0"
+                        max="100000000"
+                        step="1"
+                        required
+                        placeholder="For example, 350000"
+                        value={
+                          draftProfile.income < 0 ? "" : draftProfile.income
+                        }
+                        onChange={(e) =>
+                          setDraftProfile({
+                            ...draftProfile,
+                            income:
+                              e.target.value === ""
+                                ? -1
+                                : Number(e.target.value),
+                          })
+                        }
+                      />
+                    </>
+                  )}
+                  <p className="field-help">
+                    If you are unsure, choose the closest range. If a range
+                    crosses a scholarship income limit, Grantly will mark that
+                    requirement as uncertain rather than assume eligibility.
+                  </p>
                 </div>
                 <label>
                   Gender (optional)

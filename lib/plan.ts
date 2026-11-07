@@ -1,4 +1,9 @@
-import { initialProfile, opportunities, daysLeft } from "./scholarships.ts";
+import {
+  initialProfile,
+  opportunities,
+  daysLeft,
+  incomeRanges,
+} from "./scholarships.ts";
 export const statuses = [
   "Saved",
   "Planning",
@@ -67,6 +72,11 @@ export function readPlan(raw: string | null) {
         p.income <= 100000000
       )
         empty.profile.income = p.income;
+      if (
+        incomeRanges.some((range) => range.value === p.incomeRange) &&
+        empty.profile.income === -1
+      )
+        empty.profile.incomeRange = p.incomeRange;
       if (
         typeof p.grade === "number" &&
         Number.isFinite(p.grade) &&

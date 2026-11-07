@@ -12,6 +12,7 @@ export const initialProfile = {
   field: "Engineering",
   level: "",
   income: -1,
+  incomeRange: "",
   grade: 0,
   gender: "Prefer not to say",
   aicte: "",
@@ -26,33 +27,90 @@ export const initialProfile = {
 export type StudentProfile = typeof initialProfile;
 export const opportunities = dataset;
 export const money = (n: number) => "₹" + n.toLocaleString("en-IN");
+export const incomeRanges = [
+  { value: "up-to-250000", label: "₹0 – ₹2.5 lakh", min: 0, max: 250000 },
+  {
+    value: "250001-450000",
+    label: "₹2.5 – ₹4.5 lakh",
+    min: 250001,
+    max: 450000,
+  },
+  {
+    value: "450001-800000",
+    label: "₹4.5 – ₹8 lakh",
+    min: 450001,
+    max: 800000,
+  },
+  {
+    value: "above-800000",
+    label: "Above ₹8 lakh",
+    min: 800001,
+    max: 100000000,
+  },
+] as const;
 export function eligibilityChecks(s: Scholarship, p: StudentProfile) {
   return s.rules.map((r: Rule) => {
     const v = (p as unknown as Record<string, unknown>)[r.field];
+    const incomeRange =
+      r.field === "income"
+        ? incomeRanges.find((range) => range.value === p.incomeRange)
+        : undefined;
     const unknown =
       v === undefined ||
       v === null ||
       v === "" ||
       v === "Prefer not to say" ||
-      v === -1;
+      (v === -1 && !incomeRange);
     let pass: boolean | null = null;
     if (!unknown) {
-      switch (r.op) {
-        case "eq":
-          pass =
-            typeof r.value === "number" ? Number(v) === r.value : v === r.value;
-          break;
-        case "in":
-          pass = (r.value as unknown[]).includes(v);
-          break;
-        case "lte":
-          pass = Number(v) <= Number(r.value);
-          break;
-        case "gte":
-          pass = Number(v) >= Number(r.value);
-          break;
-        case "gt":
-          pass = Number(v) > Number(r.value);
+      if (incomeRange) {
+        const limit = Number(r.value);
+        switch (r.op) {
+          case "lte":
+            pass =
+              incomeRange.max <= limit
+                ? true
+                : incomeRange.min > limit
+                  ? false
+                  : null;
+            break;
+          case "gte":
+            pass =
+              incomeRange.min >= limit
+                ? true
+                : incomeRange.max < limit
+                  ? false
+                  : null;
+            break;
+          case "gt":
+            pass =
+              incomeRange.min > limit
+                ? true
+                : incomeRange.max <= limit
+                  ? false
+                  : null;
+            break;
+        }
+      } else {
+        switch (r.op) {
+          case "eq":
+            pass =
+              typeof r.value === "number"
+                ? Number(v) === r.value
+                : v === r.value;
+            break;
+          case "in":
+            pass = (r.value as unknown[]).includes(v);
+            break;
+          case "lte":
+            pass = Number(v) <= Number(r.value);
+            break;
+          case "gte":
+            pass = Number(v) >= Number(r.value);
+            break;
+          case "gt":
+            pass = Number(v) > Number(r.value);
+        }
       }
     }
     return {

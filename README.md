@@ -17,7 +17,7 @@ Never commit private keys or prefix them with `VITE_`. `.env.local` is ignored a
 
 ## Features
 
-Five fully curated Indian scholarship records plus an NSP listing inventory; search and advanced filters; explainable four-state eligibility; source-linked details; bookmarks/comparison; application statuses, notes and CSV; shared preparation checklist; Preparation Multiplier; deadline timeline/calendar and in-app reminders; bounded Gemini guidance; optional Supabase signup/sign-in and explicit cloud save/load.
+Five fully curated Indian scholarship records plus an NSP listing inventory; search and advanced filters; explainable four-state eligibility; exact or approximate annual household-income matching; source-linked details; bookmarks/comparison; application statuses, notes and CSV; shared preparation checklist; Preparation Multiplier; deadline timeline/calendar and in-app reminders; bounded Gemini guidance; optional Supabase signup/sign-in and explicit cloud save/load.
 
 Eligibility is preliminary guidance against sourced rules, not official approval or an award probability. The five-record matcher is not a live or exhaustive national directory. The NSP inventory can be refreshed from its official listing with `npm run refresh:nsp`; this only refreshes discovery names, listing dates and official document links. It does not automatically verify eligibility or add schemes to match results. Old fictional records are no longer used. Their browser data is retained under its old namespace, without silent conversion to real applications.
 

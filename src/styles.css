@@ -2484,7 +2484,8 @@ footer,
   min-width: 0;
 }
 .field-group input,
-.income-field > input {
+.income-field > input,
+.income-field > select {
   display: block;
   width: 100%;
   border: 1px solid #dbe1d2;
@@ -2500,24 +2501,6 @@ footer,
   font-weight: 400;
   line-height: 1.6;
   margin: 7px 0 0;
-}
-.income-shortcuts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 8px;
-}
-.income-shortcut {
-  border: 1px solid #d8dfcf;
-  border-radius: 18px;
-  background: #fff;
-  color: #496737;
-  padding: 6px 10px;
-  font-size: 10px;
-}
-.income-shortcut[aria-pressed="true"] {
-  background: #e9eee2;
-  border-color: #9baa89;
 }
 .catalog-scope {
   padding: 12px 15px;

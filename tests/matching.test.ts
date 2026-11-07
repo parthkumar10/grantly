@@ -36,6 +36,25 @@ test("Pragati inclusive income ceiling and household criteria", () => {
     "Ineligible",
   );
 });
+test("income ranges only confirm eligibility when the full range fits the limit", () => {
+  const profile = { ...complete, income: -1, incomeRange: "450001-800000" };
+  assert.equal(eligibilityStatus(opportunities[0], profile), "Eligible");
+  assert.equal(eligibilityStatus(opportunities[3], profile), "Ineligible");
+  assert.equal(
+    eligibilityStatus(opportunities[3], {
+      ...profile,
+      incomeRange: "250001-450000",
+    }),
+    "Potentially Eligible",
+  );
+  assert.equal(
+    eligibilityStatus(opportunities[0], {
+      ...profile,
+      incomeRange: "above-800000",
+    }),
+    "Ineligible",
+  );
+});
 test("unknown conditions remain potentially eligible", () =>
   assert.equal(
     eligibilityStatus(opportunities[0], { ...complete, aicte: "" }),
