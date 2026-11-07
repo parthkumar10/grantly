@@ -1,0 +1,423 @@
+[
+  {
+    "org": "AICTE · Ministry of Education",
+    "amount": 50000,
+    "benefits": "₹50,000 per year; maximum duration depends on entry year and course.",
+    "field": "Technical",
+    "income": 800000,
+    "grade": 0,
+    "location": "India",
+    "applicationUrl": "https://scholarships.gov.in/Students",
+    "lastVerified": "2026-11-07",
+    "deadline": "2026-11-30",
+    "deadlineStatus": "verified",
+    "deadlineScope": "Student application · AY 2026–27",
+    "deadlineSource": "https://scholarships.gov.in/All-Scholarships",
+    "documentStatus": "Income certificate is specified in the guidelines. Other checklist items are preparation suggestions; confirm the portal list.",
+    "docs": ["Income certificate", "Enrollment proof", "Academic transcript"],
+    "process": [
+      "Register or sign in through the official NSP student portal.",
+      "Find the scheme for your course and review the current guidelines.",
+      "Complete the form and required evidence on NSP; submit before its applicable deadline.",
+      "Track institutional and state verification on NSP."
+    ],
+    "verificationNote": "NSP currently links July 2020 guidelines. Rules below are sourced from that edition; confirm current-cycle amendments before applying.",
+    "id": 101,
+    "name": "AICTE Pragati — Degree",
+    "level": "Undergraduate",
+    "type": "Merit-based",
+    "color": "sage",
+    "symbol": "P",
+    "desc": "Support for women beginning an approved technical degree.",
+    "sourceUrl": "https://scholarships.gov.in/public/schemeGuidelines/AICTE/AICTE_2010_G.pdf",
+    "rules": [
+      {
+        "field": "level",
+        "label": "Course level",
+        "op": "eq",
+        "value": "Undergraduate",
+        "info": "Technical undergraduate degree"
+      },
+      {
+        "field": "gender",
+        "label": "Applicant group",
+        "op": "eq",
+        "value": "Woman",
+        "info": "Women applicants"
+      },
+      {
+        "field": "income",
+        "label": "Annual household income",
+        "op": "lte",
+        "value": 800000,
+        "info": "Up to ₹8 lakh"
+      },
+      {
+        "field": "aicte",
+        "label": "Approved institution",
+        "op": "eq",
+        "value": "Yes",
+        "info": "Institution must be AICTE-approved"
+      },
+      {
+        "field": "entry",
+        "label": "Admission route",
+        "op": "in",
+        "value": ["First year", "Second year lateral"],
+        "info": "First year or second-year lateral entry"
+      },
+      {
+        "field": "gapYears",
+        "label": "Gap after qualifying exam",
+        "op": "lte",
+        "value": 2,
+        "info": "No more than two years"
+      },
+      {
+        "field": "otherAid",
+        "label": "Other financial assistance",
+        "op": "eq",
+        "value": "No",
+        "info": "No other financial assistance during the course"
+      },
+      {
+        "field": "girlsSupported",
+        "label": "Girls supported in family",
+        "op": "lte",
+        "value": 2,
+        "info": "Maximum two girls per family"
+      }
+    ]
+  },
+  {
+    "org": "AICTE · Ministry of Education",
+    "amount": 50000,
+    "benefits": "₹50,000 per year; maximum duration depends on entry year and course.",
+    "field": "Technical",
+    "income": 800000,
+    "grade": 0,
+    "location": "India",
+    "applicationUrl": "https://scholarships.gov.in/Students",
+    "lastVerified": "2026-11-07",
+    "deadline": "2026-11-30",
+    "deadlineStatus": "verified",
+    "deadlineScope": "Student application · AY 2026–27",
+    "deadlineSource": "https://scholarships.gov.in/All-Scholarships",
+    "documentStatus": "Income certificate is specified in the guidelines. Other checklist items are preparation suggestions; confirm the portal list.",
+    "docs": ["Income certificate", "Enrollment proof", "Academic transcript"],
+    "process": [
+      "Register or sign in through the official NSP student portal.",
+      "Find the scheme for your course and review the current guidelines.",
+      "Complete the form and required evidence on NSP; submit before its applicable deadline.",
+      "Track institutional and state verification on NSP."
+    ],
+    "verificationNote": "NSP currently links July 2020 guidelines. Rules below are sourced from that edition; confirm current-cycle amendments before applying.",
+    "id": 102,
+    "name": "AICTE Pragati — Diploma",
+    "level": "Diploma",
+    "type": "Merit-based",
+    "color": "peach",
+    "symbol": "P",
+    "desc": "Education support for women entering an approved technical diploma.",
+    "sourceUrl": "https://scholarships.gov.in/public/schemeGuidelines/AICTE/AICTE_2011_G.pdf",
+    "rules": [
+      {
+        "field": "level",
+        "label": "Course level",
+        "op": "eq",
+        "value": "Diploma",
+        "info": "Technical diploma"
+      },
+      {
+        "field": "gender",
+        "label": "Applicant group",
+        "op": "eq",
+        "value": "Woman",
+        "info": "Women applicants"
+      },
+      {
+        "field": "income",
+        "label": "Annual household income",
+        "op": "lte",
+        "value": 800000,
+        "info": "Up to ₹8 lakh"
+      },
+      {
+        "field": "aicte",
+        "label": "Approved institution",
+        "op": "eq",
+        "value": "Yes",
+        "info": "Institution must be AICTE-approved"
+      },
+      {
+        "field": "entry",
+        "label": "Admission route",
+        "op": "in",
+        "value": ["First year", "Second year lateral"],
+        "info": "First year or second-year lateral entry"
+      },
+      {
+        "field": "gapYears",
+        "label": "Gap after qualifying exam",
+        "op": "lte",
+        "value": 2,
+        "info": "No more than two years"
+      },
+      {
+        "field": "otherAid",
+        "label": "Other financial assistance",
+        "op": "eq",
+        "value": "No",
+        "info": "No other financial assistance during the course"
+      },
+      {
+        "field": "girlsSupported",
+        "label": "Girls supported in family",
+        "op": "lte",
+        "value": 2,
+        "info": "Maximum two girls per family"
+      }
+    ]
+  },
+  {
+    "org": "AICTE · Ministry of Education",
+    "amount": 50000,
+    "benefits": "₹50,000 per year; maximum duration depends on entry year and course.",
+    "field": "Technical",
+    "income": 800000,
+    "grade": 0,
+    "location": "India",
+    "applicationUrl": "https://scholarships.gov.in/Students",
+    "lastVerified": "2026-11-07",
+    "deadline": "2026-11-30",
+    "deadlineStatus": "verified",
+    "deadlineScope": "Student application · AY 2026–27",
+    "deadlineSource": "https://scholarships.gov.in/All-Scholarships",
+    "documentStatus": "Income certificate is specified in the guidelines. Other checklist items are preparation suggestions; confirm the portal list.",
+    "docs": [
+      "Income certificate",
+      "Enrollment proof",
+      "Academic transcript",
+      "Disability certificate"
+    ],
+    "process": [
+      "Register or sign in through the official NSP student portal.",
+      "Find the scheme for your course and review the current guidelines.",
+      "Complete the form and required evidence on NSP; submit before its applicable deadline.",
+      "Track institutional and state verification on NSP."
+    ],
+    "verificationNote": "NSP currently links July 2020 guidelines. Rules below are sourced from that edition; confirm current-cycle amendments before applying.",
+    "id": 103,
+    "name": "AICTE Saksham — Degree",
+    "level": "Undergraduate",
+    "type": "Disability support",
+    "color": "lavender",
+    "symbol": "S",
+    "desc": "Support for students with benchmark disabilities beginning technical degrees.",
+    "sourceUrl": "https://scholarships.gov.in/public/schemeGuidelines/AICTE/AICTE_2012_G.pdf",
+    "rules": [
+      {
+        "field": "level",
+        "label": "Course level",
+        "op": "eq",
+        "value": "Undergraduate",
+        "info": "Technical undergraduate degree"
+      },
+      {
+        "field": "disability",
+        "label": "Certified disability",
+        "op": "gte",
+        "value": 40,
+        "info": "At least 40% certified disability"
+      },
+      {
+        "field": "income",
+        "label": "Annual household income",
+        "op": "lte",
+        "value": 800000,
+        "info": "Up to ₹8 lakh"
+      },
+      {
+        "field": "aicte",
+        "label": "Approved institution",
+        "op": "eq",
+        "value": "Yes",
+        "info": "Institution must be AICTE-approved"
+      },
+      {
+        "field": "entry",
+        "label": "Admission route",
+        "op": "in",
+        "value": ["First year", "Second year lateral"],
+        "info": "First year or second-year lateral entry"
+      },
+      {
+        "field": "gapYears",
+        "label": "Gap after qualifying exam",
+        "op": "lte",
+        "value": 2,
+        "info": "No more than two years"
+      },
+      {
+        "field": "otherAid",
+        "label": "Other financial assistance",
+        "op": "eq",
+        "value": "No",
+        "info": "No other financial assistance during the course"
+      }
+    ]
+  },
+  {
+    "org": "Department of Higher Education",
+    "amount": 12000,
+    "benefits": "₹12,000/year in the first three undergraduate years; ₹20,000 for specified later or postgraduate years. Renewal conditions apply.",
+    "field": "Any field",
+    "income": 450000,
+    "grade": 0,
+    "location": "India",
+    "applicationUrl": "https://scholarships.gov.in/Students",
+    "lastVerified": "2026-11-07",
+    "deadline": null,
+    "deadlineStatus": "conflicting",
+    "deadlineScope": "Fresh window unconfirmed; renewal dates conflict across NSP pages.",
+    "deadlineSource": "https://scholarships.gov.in/All-Scholarships",
+    "documentStatus": "Income certificate is specified in the guidelines. Other checklist items are preparation suggestions; confirm the portal list.",
+    "docs": ["Income certificate", "Enrollment proof", "Academic transcript"],
+    "process": [
+      "Register or sign in through the official NSP student portal.",
+      "Find the scheme for your course and review the current guidelines.",
+      "Complete the form and required evidence on NSP; submit before its applicable deadline.",
+      "Track institutional and state verification on NSP."
+    ],
+    "verificationNote": "Eligibility uses the official 2025–26 FAQ. NSP scheme list shows renewal 30 Nov 2026; student announcement shows 31 Oct 2026. No fresh deadline confirmed. Check your NSP account.",
+    "id": 104,
+    "name": "PM-USP Central Sector Scholarship",
+    "level": "Undergraduate",
+    "type": "Merit-cum-means",
+    "color": "blue",
+    "symbol": "U",
+    "desc": "Merit-cum-means support for college students. This checker covers fresh-applicant rules from the 2025–26 FAQ.",
+    "sourceUrl": "https://scholarships.gov.in/public/schemeGuidelines/FAQ_DOHE_CSSS.pdf",
+    "rules": [
+      {
+        "field": "level",
+        "label": "Course level",
+        "op": "eq",
+        "value": "Undergraduate",
+        "info": "Fresh undergraduate applicant; diploma excluded"
+      },
+      {
+        "field": "percentile",
+        "label": "Class XII board percentile",
+        "op": "gt",
+        "value": 80,
+        "info": "Above 80th percentile, not 80% marks"
+      },
+      {
+        "field": "income",
+        "label": "Annual household income",
+        "op": "lte",
+        "value": 450000,
+        "info": "Up to ₹4.5 lakh"
+      },
+      {
+        "field": "regular",
+        "label": "Study mode",
+        "op": "eq",
+        "value": "Yes",
+        "info": "Regular course, not distance/correspondence"
+      },
+      {
+        "field": "gapYears",
+        "label": "Gap after Class XII",
+        "op": "eq",
+        "value": 0,
+        "info": "No gap after Class XII"
+      },
+      {
+        "field": "otherAid",
+        "label": "Other scholarship or fee reimbursement",
+        "op": "eq",
+        "value": "No",
+        "info": "No other scholarship or fee reimbursement"
+      }
+    ]
+  },
+  {
+    "org": "AICTE · Ministry of Education",
+    "amount": 50000,
+    "benefits": "₹50,000 per year; maximum 3 years for first-year entry or 2 years for second-year lateral entry.",
+    "field": "Technical",
+    "income": 800000,
+    "grade": 0,
+    "location": "India",
+    "applicationUrl": "https://scholarships.gov.in/Students",
+    "lastVerified": "2026-11-07",
+    "deadline": "2026-11-30",
+    "deadlineStatus": "verified",
+    "deadlineScope": "Student application · AY 2026–27",
+    "deadlineSource": "https://scholarships.gov.in/All-Scholarships",
+    "documentStatus": "AICTE guidelines specify a current-year government income certificate. Confirm the full upload checklist in NSP.",
+    "docs": [
+      "Income certificate",
+      "Enrollment proof",
+      "Academic transcript",
+      "Disability certificate"
+    ],
+    "process": [
+      "Register or sign in through the official NSP student portal.",
+      "Find the AICTE Saksham technical diploma scheme and review its current guidelines.",
+      "Complete the form and submit the required evidence on NSP before the applicable deadline.",
+      "Track institutional and state verification on NSP."
+    ],
+    "verificationNote": "Eligibility and award amount checked against the NSP-linked July 2020 AICTE diploma guideline and corroborated by Maharashtra DTE. Check for current-cycle amendments before applying.",
+    "supportingSources": [
+      "https://dte.maharashtra.gov.in/saksham-scholarship-scheme/"
+    ],
+    "id": 105,
+    "name": "AICTE Saksham — Diploma",
+    "level": "Diploma",
+    "type": "Disability support",
+    "color": "lavender",
+    "symbol": "S",
+    "desc": "Support for specially abled students beginning approved technical diplomas.",
+    "sourceUrl": "https://scholarships.gov.in/public/schemeGuidelines/AICTE/AICTE_2013_G.pdf",
+    "rules": [
+      {
+        "field": "level",
+        "label": "Course level",
+        "op": "eq",
+        "value": "Diploma",
+        "info": "Technical diploma"
+      },
+      {
+        "field": "disability",
+        "label": "Certified disability",
+        "op": "gte",
+        "value": 40,
+        "info": "At least 40% certified disability"
+      },
+      {
+        "field": "income",
+        "label": "Annual household income",
+        "op": "lte",
+        "value": 800000,
+        "info": "Up to ₹8 lakh"
+      },
+      {
+        "field": "aicte",
+        "label": "Approved institution",
+        "op": "eq",
+        "value": "Yes",
+        "info": "Institution must be AICTE-approved"
+      },
+      {
+        "field": "entry",
+        "label": "Admission route",
+        "op": "in",
+        "value": ["First year", "Second year lateral"],
+        "info": "First-year or second-year lateral entry"
+      }
+    ]
+  }
+]
