@@ -1,5 +1,7 @@
 # Grantly — a clearer scholarship journey
 
+[Live app](https://grantly-99fg.onrender.com)
+
 React/TypeScript/Vite frontend, Node API and optional Supabase accounts. Continues the original Grantly design and working features.
 
 ## VS Code setup
