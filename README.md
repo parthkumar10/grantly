@@ -2,9 +2,9 @@
 
 # Grantly
 
-### Find scholarships that fit. Know what to do next.
+### Rethinking the scholarship experience.
 
-Discover source-linked opportunities, understand how your profile matches, and keep application preparation in one place.
+Make educational financial assistance easier to discover, understand, and manage—from first search to next step.
 
 [**Open the live demo →**](https://grantly-99fg.onrender.com) · [Demo walkthrough](docs/DEMO.md) · [Data sources & coverage](docs/DATA_SOURCES.md)
 
@@ -14,11 +14,11 @@ Discover source-linked opportunities, understand how your profile matches, and k
 
 ## The problem
 
-For many students, finding financial support is not one search—it is a maze of portals, scattered eligibility rules, unclear deadlines, and application details that are easy to lose. A long list of links does not tell a student which opportunity may fit, why it may fit, what still needs checking, or what to prepare next.
+Accessing educational financial assistance can be a complicated journey. Students must find relevant opportunities, understand their options, navigate application processes, and keep important information organized—often across disconnected pages and portals. This creates avoidable friction in a process that should help students focus on their education.
 
 ## The solution
 
-**Grantly turns scholarship discovery into a guided, explainable journey.** It brings a carefully sourced starter catalog and an official discovery inventory into one workspace, compares scholarship criteria with a student's profile, and helps organize saved opportunities and application preparation.
+**Grantly rethinks that journey as one clear, student-centered experience.** It brings discovery, profile-based eligibility explanations, source links, application organization, preparation tasks, and deadlines into one workspace—helping students move from scattered information toward a confident next step.
 
 The goal is clarity and useful next steps—not a promise of eligibility, selection, or funding.
 
