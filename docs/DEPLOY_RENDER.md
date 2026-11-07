@@ -6,10 +6,11 @@ project is in the private GitHub repository
 
 1. In Render, choose **New → Blueprint**, connect
    `parthkumar10/grantly`, and approve the `render.yaml` service configuration.
-2. Before deploying, enter the four environment variables requested by the
-   Blueprint. Use the Supabase project URL and publishable key, plus the
-   server-only Gemini API key and model. Never enter a Supabase secret/service
-   role key or expose the Gemini key as a `VITE_` variable.
+2. Before deploying, enter the Supabase project URL and publishable key. Add
+   the server-only Gemini API key to enable the optional assistant; the
+   Blueprint defaults `GEMINI_MODEL` to `gemini-3.1-flash-lite`. Never enter a
+   Supabase secret/service-role key or expose the Gemini key as a `VITE_`
+   variable.
 3. Wait for the Render health check at `/api/config` to pass and open the
    generated `https://…onrender.com` address.
 4. In Supabase Authentication URL Configuration, set the Site URL to that
