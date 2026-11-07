@@ -1,22 +1,21 @@
 # Deploy Grantly on Render
 
-This Blueprint deploys the Node API and Vite frontend as one web service. It
-expects a Git repository that you control; this workspace is not currently
-connected to one.
+This Blueprint deploys the Node API and Vite frontend as one web service. The
+project is in the private GitHub repository
+`https://github.com/parthkumar10/grantly`, on the `main` branch.
 
-1. Put the project in a private GitHub repository and push the code.
-2. In Render, choose **New → Blueprint**, connect that repository, and approve
-   the `render.yaml` service configuration.
-3. Before deploying, enter the four environment variables requested by the
+1. In Render, choose **New → Blueprint**, connect
+   `parthkumar10/grantly`, and approve the `render.yaml` service configuration.
+2. Before deploying, enter the four environment variables requested by the
    Blueprint. Use the Supabase project URL and publishable key, plus the
    server-only Gemini API key and model. Never enter a Supabase secret/service
    role key or expose the Gemini key as a `VITE_` variable.
-4. Wait for the Render health check at `/api/config` to pass and open the
+3. Wait for the Render health check at `/api/config` to pass and open the
    generated `https://…onrender.com` address.
-5. In Supabase Authentication URL Configuration, set the Site URL to that
+4. In Supabase Authentication URL Configuration, set the Site URL to that
    exact Render URL and add it as an allowed redirect URL. Add local
    `http://127.0.0.1:5173` too if local sign-in is still needed.
-6. Create/sign in to a Grantly account on the deployed site. Test sign-out,
+5. Create/sign in to a Grantly account on the deployed site. Test sign-out,
    sign-in, save, and load. A local account session does not automatically
    transfer to the hosted domain.
 
