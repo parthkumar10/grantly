@@ -16,6 +16,19 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 14px;
 }
+.account-warning {
+  position: fixed;
+  z-index: 100;
+  inset: 12px 12px auto;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  border: 1px solid #e6c98a;
+  border-radius: 10px;
+  background: #fff8e8;
+  color: #684d17;
+  box-shadow: 0 4px 20px #243d331a;
+}
 button,
 input,
 select {
